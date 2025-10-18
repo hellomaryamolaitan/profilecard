@@ -15,6 +15,20 @@ A simple HTML profile card displaying a user's name, avatar, biography, hobbies,
 
 ---
 
+profile-card/
+│
+├── index.html      # Main HTML file
+└── README.md       # Documentation and setup guide
+
+---
+
+# Technologies used
+- HTML
+- CSS
+- Javascript 
+
+---
+
 ## 🛠️ How to Run Locally
 
 1. **Clone this repository**
