@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Maryam Olaitan">
+    <meta name="keywords" content="maryam olaitan, minimalist web developer in nigeria, web design portfolio, website designer in lagos, user experience, brand identity, Maryam Olaitan web developer">
+    <meta name="description" content="Minimalist web developer crafting clean, conversion-focused websites that strengthen brands, delight users, and drive results.">
+    <meta name="robots" content="index, follow">
+    <meta property="og:title" content="Maryam Olaitan | Minimalist Web Developer">
+    <meta property="og:description" content="Minimalist web developer crafting clean, conversion-focused websites that strengthen brands, delight users, and drive results.">
+    <meta property="og:image" content="https://maryamdev.vercel.app/images/maryam-olaitan.ico">
+    <meta property="og:url" content="https://maryamdev.vercel.app">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://maryamdev.vercel.app">
+    <meta property="og:image" content="images/maryam-olaitan.ico">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Maryam Olaitan | Minimalist Web Developer">
+    <meta name="twitter:description" content="Minimalist Web Developer">
+    <meta name="twitter:image" content="images/maryam-olaitan.ico">
+    <title>Maryam Olaitan Profile Card | Hng13 #track-frontend Task 0</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="images/maryam-olaitan.ico" type="image/ico">
+    <link rel="apple-touch-icon" href="images/maryam-olaitan.ico">
+    <script type="application/ld+json">
+        {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Maryam Olaitan",
+        "jobTitle": "Minimalist Web Developer",
+        "url": "https://maryamdev.vercel.app/index.html",
+        "sameAs": [
+            "https://www.instagram.com/_maryamolaitan",
+            "https://wa.me/2348144105468",
+            "mailto:olaitanmaryamm@gmail.com"
+        ],
+        "image": "https://maryamdev.vercel.app/images/maryam-olaitan.ico",
+        "description": "Maryam Olaitan creates minimalist websites that go beyond aesthetics—they tell your story, strengthen your brand, and guide visitors with clarity."
+        }
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Gelasio:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h2>Maryam Olaitan</h2>
+        <img src="images/menu.png" alt="">
+    </header>
+    <main  data-testid="test-profile-card-container">  
+        <article data-testid="test-profile-card">
+           <div class="left">
+                <figure>
+                <img src="images/maryam olaitan.jpeg" alt="User Avatar" data-testid="test-user-avatar">
+            </figure>
+            
+            <h2 data-testid="test-user-name">Maryam Olaitan</h2>
+           </div>
+           <div data-testid="test-user-bio-container" class="right">
+                <p data-testid="test-user-bio" class="bio">
+                Frontend Web Developer and contemporary artist creating experiences that connect. Whether through code or canvas, my goal is the same: to merge clarity with creativity and leave a lasting impression.
+                </p>
+            
+                <p data-testid="test-user-time" id="currentTime"></p>
+                
+                <ul data-testid="test-user-social-links" class="socials">
+                    <li><a href="https://gravatar.com/olaitanmaryam" target="_blank" data-testid="test-user-social-gravatar">Gravatar</a></li>
+                    <li><a href="https://instagram.com/_maryamolaitan" target="_blank" data-testid="test-user-social-instagram">Instagram</a></li>
+                    <li><a href="https://wa.me/2348165536065" target="_blank" data-testid="test-user-social-linkedin">LinkedIn</a></li>
+                </ul>
+
+                <div data-testid="test-user-hobbies-container" class="bottom">
+                    <section>
+                    <h3>Hobbies</h3>
+                    <ul data-testid="test-user-hobbies">
+                        <li>Reading</li>
+                        <li>Digital Art</li>
+                        <li>Photography</li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h3>Dislikes</h3>
+                    <ul data-testid="test-user-dislikes">
+                        <li>Noisy environments</li>
+                        <li>Disorganization</li>
+                        <li>Negativity</li>
+                    </ul>
+                </section>
+                </div>
+           </div>
+        </article>
+    </main>
+    <script>
+        function updateClock() {
+        const timeElement = document.getElementById("currentTime");
+        const now = new Date();
+        let hours = now.getHours();
+        let minutes = now.getMinutes();
+        let seconds = now.getSeconds();
+        hours = hours.toString().padStart(2, "0");
+        minutes = minutes.toString().padStart(2, "0");
+        seconds = seconds.toString().padStart(2, "0");
+        const formattedTime = `${hours}:${minutes}:${seconds}`;
+        timeElement.textContent = formattedTime;
+        }
+        setInterval(updateClock, 1000);
+        updateClock();
+  </script>
+</body>
+</html>
