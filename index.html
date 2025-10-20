@@ -40,25 +40,23 @@
     </script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Macondo&display=swap" rel="stylesheet">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&display=swap" rel="stylesheet">
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Gelasio:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
         <h2>Maryam Olaitan</h2>
         <nav>
-          <a href="index.html">Home</a> |
-          <a href="about.html">About Me</a> |
-          <a href="contact.html">Contact Us</a>
+            <img src="images/menu.png" alt="menu, art sales, website design by Maryam Olaitan" class="menu" onclick="toggleMenu()">
+            <ul id="menuList"> 
+                <li><a href="/about">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
         </nav>
-        <img src="images/menu.png" alt="menu icon">
     </header>
     <main  data-testid="test-profile-card-container">  
         <article data-testid="test-profile-card">
@@ -120,6 +118,14 @@
         setInterval(updateClock, 1000);
         updateClock();
   </script>
+    <script>
+        let menuList = document.getElementById('menuList')
+        menuList.style.maxHeight = '0px'; 
+        function toggleMenu() { 
+        if(menuList.style.maxHeight == '0px'){menuList.style.maxHeight = '96vh';}
+        else{menuList.style.maxHeight = '0px';}
+        }
+    </script>
+    <script defer data-domain="maryamolaitan.vercel.app" src="https://plausible.io/js/script.js"></script>
 </body>
-
 </html>
