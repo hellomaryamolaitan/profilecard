@@ -1,12 +1,10 @@
     body {
-      font-family: Arial, sans-serif;
-      background-color: #46502ac6;
-   
-      width: 96vw;
-      height: 96vh;
-      margin: 0 auto;
-      overflow: hidden;
-      
+        font-family: "Cormorant Garamond", serif;
+        background-color: #46502ac6;
+        width: 96vw;
+        height: 96vh;
+        margin: 0 auto;
+        overflow: hidden;
     }
 
     header {
@@ -23,9 +21,53 @@
         background-color: #fff;
     }
 
-    header img {
-        width: 28px;
-        height: 28px;
+    header h2 {
+        width: 50%;
+        margin: 0 auto;
+        display: flex;
+        flex-flow: row;
+        justify-content: left;
+        align-items: center;
+        font-size: 24px;
+        font-family: "Macondo";
+        font-weight: 400;
+        font-style: normal;
+    }
+
+    .menu {
+        display: none;
+    }
+
+    nav {
+        width: 50%;
+    }
+
+    nav ul {   
+        display: flex;
+        flex-flow: row;
+        justify-content: right;
+        align-items: center;
+    }
+
+    nav ul li {
+        margin-left: 20px;
+    }
+
+    ul li {
+        list-style: none;
+    }
+
+    li a {
+        font-size: 16px;
+        color: #000;
+        text-decoration: none;
+        font-family: "Macondo";
+        font-weight: 400;
+        font-style: normal;
+    }
+
+    li a:hover {
+        opacity: 70%;
     }
 
     main {
@@ -83,7 +125,6 @@
         width: 60%;
         height: 96%;
         padding: 20px;
-
         border-top-right-radius: 20px;
         border-bottom-right-radius: 20px;
         display: flex;
@@ -106,7 +147,7 @@
     }
 
     .socials {
-        width: 68%;
+        width: 72%;
         margin: 0 auto;
         display: flex;
         flex-flow: row;
@@ -118,11 +159,12 @@
         list-style: none;
         border: 2px solid;
         padding: 4px 8px;
+        border: 2px solid #fff;
         border-radius: 12px;
     }
 
-    .socials li:hover {
-        opacity: 70%;
+    .socials li a, .socials li a:visited {
+        color: #fff;
     }
 
     .bottom {
@@ -133,175 +175,311 @@
     }
 
     .bottom h3 {
-        color: #000;
+        color: #f9de31;
     }
 
-    ul {
-      list-style: none;
+    article .right ul {
       padding: 0;
     }
 
-    ul li a,  ul li a:visited {
-        text-decoration: none;
-        color: #f9de31;
-        margin-top: 8px;
+@media screen and (max-width: 1024px) {
+    body {
+        overflow-y: scroll;
+        height: max-content;
     }
 
-    @media screen and (max-width: 1024px) {
-        body {
-            overflow-y: scroll;
-            height: max-content;
-        }
-
-        header {
-            width: 96%;
-            height: 48px;
-            padding: 0 8px;
-        }
-
-        header h2 {
-            font-size: 16px;
-        }
-
-        header img {
-            width: 20px;
-            height: 20px;
-        }
-
-        main {
-            width: 100%;
-            height: max-content;
-            margin-top: 20px;
-            margin-bottom: 12px;
-            border-radius: 20px;
-        }
-        
-        article {
-            width: 88%;
-            margin: 12px auto;
-            border-radius: 40px;
-        }
-
-        article .left {
-            height: max-content;
-            margin: 0 auto;
-            margin-bottom: 20px;
-        }
-
-        article .left  figure {
-            height: max-content;
-        }
-
-        article .right {
-            height: max-content;
-            padding: 0;
-        }
-
-        .bio{
-            width: 92%;
-        }
-
-        .socials {
-            width: 88%;
-        }
-
-        .socials li {
-            width: 24%;
-        }
-
-        .bottom {
-            width: 92%;
-        }
-
-        .bio, .socials, .bottom {
-            margin-top: 40px;
-        }
-
-
-        
-
-
-     }
-
-    @media screen and (max-width: 480px) {
-   /*      body {
-            overflow-y: scroll;
-            height: max-content;
-        }
-
-        header {
-            width: 96%;
-            height: 48px;
-            padding: 0 8px;
-        }
-
-        header h2 {
-            font-size: 16px;
-        }
-
-        header img {
-            width: 20px;
-            height: 20px;
-        }
-
-        main {
-            width: 100%;
-            height: max-content;
-            margin-top: 20px;
-            margin-bottom: 12px;
-            border-radius: 20px;
-        } */
-
-        article {
-            width: 80%;
-            margin: 12px auto;
-            flex-flow: column;
-            border-radius: 40px;
-        }
-
-        article .left {
-            width: 96%;
-            height: max-content;
-            margin: 0 auto;
-            margin-bottom: 20px;
-        }
-
-        article .left  figure {
-            height: max-content;
-        }
-
-        article .right {
-            width: 100%;
-            height: max-content;
-            padding: 0;
-        }
-
-        .bio{
-            width: 92%;
-            font-size: 14px;
-        }
-
-        .left h2 {
-            display: none;
-        }
-
-        .socials {
-            width: 88%;
-        }
-
-        .socials li {
-            width: 24%;
-            font-size: 12px;
-        }
-
-        .bottom {
-            width: 92%;
-            margin: 12px auto;
-            flex-flow: column;
-            justify-content: center;
-        }
-
-        .bio, .socials, .bottom {
-            margin-top: 40px;
-        }
+    header {
+        width: 96%;
+        height: 48px;
+        padding: 0 20px;
     }
+
+    header h2 {
+        font-size: 16px;
+    }
+
+    header img {
+        width: 20px;
+        height: 20px;
+    }
+
+    main {
+        width: 100%;
+        height: max-content;
+        margin-top: 20px;
+        margin-bottom: 12px;
+        border-radius: 20px;
+    }
+        
+    article {
+        width: 88%;
+        margin: 12px auto;
+        border-radius: 40px;
+    }
+
+    article .left {
+        height: max-content;
+        margin: 0 auto;
+        margin-bottom: 20px;
+    }
+
+    article .left  figure {
+        height: max-content;
+    }
+
+    article .right {           
+        height: max-content;
+        padding: 0;
+    }
+        
+    .bio{
+        width: 92%;
+    }
+
+    .socials {
+        width: 80%;
+    }
+
+    .socials li {
+        width: 20%;
+    }
+
+    .bio, .socials, .bottom {
+        margin-top: 40px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    header {
+        height: 48px;
+        padding: 0 8px;
+        flex-flow: row;
+        justify-content: space-between;
+        align-items: center;
+        top: 0;
+        z-index: 1;
+        position: sticky;
+        scrollbar-width: none;
+    }
+
+    .menu {
+        width: 24px;
+        height: 24px;
+        display: flex;
+        flex-flow: row;
+        float: right;
+        cursor: pointer;
+    }
+
+    nav ul {
+        width: 96%;
+        height: 96vh;
+        margin: 0 auto;
+        margin-right: -8px;
+        flex-flow: column;
+        top: 48px;
+        right: 0;
+        position: absolute;
+        z-index: 1;
+        overflow: hidden;
+        background-color: #fff;
+        display: flex;
+        flex-flow: column; 
+        justify-content: center;
+        align-items: center;
+    }
+
+    nav ul li {
+        margin-left: 0;
+        margin-top: 20px;
+    }
+
+    article {
+        width: 80%;
+        margin: 12px auto;
+        flex-flow: column;
+        border-radius: 40px;
+    }
+
+    article .left {
+        width: 96%;
+        height: max-content;
+        margin: 0 auto;
+        margin-bottom: 20px;
+    }
+
+    article .left  figure {
+        height: max-content;
+    }
+
+    article .right {
+        width: 100%;
+        height: max-content;
+        padding: 0;
+    }
+
+    .bio{
+        width: 92%;
+        font-size: 14px;
+    }
+
+    .left h2 {
+        display: none;
+    }
+
+    .socials {
+        width: 80%;
+    }
+
+    .socials li  {
+        width: 20%;
+    }
+
+    .socials li a {
+        font-size: 12px;
+    }
+
+    .bottom {
+        width: 88%;
+        margin: 12px auto;
+        flex-flow: column;
+        justify-content: center;
+    }
+
+    .bio, .socials, .bottom {
+        margin-top: 40px;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .menu {
+        width: 16px;
+        height: 16px;
+    }
+    .socials {
+        width: 88%;
+    }
+}
+
+/* ABOUT PAGE */
+.about-body {
+    height: max-content;
+    overflow-y: scroll;
+    scrollbar-width: none;
+}
+
+.about-header {
+    height: 48px;
+    top: 0;
+    z-index: 1;
+    position: sticky;
+    scrollbar-width: none;
+}
+
+.about-main {
+    height: max-content;
+    margin: 20px auto;
+    line-height: 1.5;
+    overflow-y: scroll;
+    scrollbar-width: none;
+}
+
+.about-main  h1 {
+    color: #fff;
+}
+
+.about-main section {
+    width: 96%;
+    background-color: #fff;
+    padding: 0 12px;
+
+}
+
+.about-main section ul li {
+    list-style-type: disc;
+    margin-bottom: 8px;
+}
+
+
+/* CONTACT PAGE */
+
+.contact-main  {
+    height: 92%;
+    margin-top: 12px;
+}
+
+.contact-main h1 {
+    color: #fff;
+}
+
+form {
+    width: 60%;
+    margin: 20px auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 8px;
+    padding-bottom: 8px;
+}
+
+form div {
+    width: 80%;
+    margin: auto;
+    display: flex;
+    flex-flow: column;
+}
+
+label { 
+    font-weight: bold; 
+    margin-bottom: 8px;
+    color: #f9de31;
+}
+
+input, textarea {
+    width: 60%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    color: #000;
+}
+
+button, button:visited {
+    width: 40%;
+    background-color: #f9de31;
+    border: 4px solid #f9de31;
+    border-radius: 20px;
+    margin: 0 auto;
+}
+
+button:hover {
+    opacity: 70%;
+}
+
+.error {
+    color: red;
+    font-size: 16px;
+}
+
+.success {
+    color: green;
+    font-weight: bold;
+    text-align: center;
+}
+
+@media screen and (max-width: 1024px) {
+    form div {
+        width: 100%;
+    }
+
+    input, textarea {
+        width: 88%;
+    }
+
+    button, button:visited {
+        width: 48%;
+    }
+
+    .error {
+        font-size: 12px;
+    }
+}
