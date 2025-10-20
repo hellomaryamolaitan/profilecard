@@ -17,8 +17,12 @@ A simple HTML profile card displaying a user's name, avatar, biography, hobbies,
 
 profile-card/
 │
-├── index.html      # Main HTML file
-└── README.md       # Documentation and setup guide
+├── index.html            ← your Stage 0 profile card
+├── contact.html          ← new Contact Us page
+├── about.html            ← new About Me page
+├── style.css             ← shared styles (optional)
+└── README.md
+
 
 ---
 
