@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Maryam Olaitan">
+    <meta name="keywords" content="maryam olaitan, minimalist web developer in nigeria, web design portfolio, website designer in lagos, user experience, brand identity, Maryam Olaitan web developer">
+    <meta name="description" content="Minimalist web developer crafting clean, conversion-focused websites that strengthen brands, delight users, and drive results.">
+    <meta name="robots" content="index, follow">
+    <meta property="og:title" content="Maryam Olaitan | Minimalist Web Developer">
+    <meta property="og:description" content="Minimalist web developer crafting clean, conversion-focused websites that strengthen brands, delight users, and drive results.">
+    <meta property="og:image" content="https://maryamdev.vercel.app/images/maryam-olaitan.ico">
+    <meta property="og:url" content="https://maryamdev.vercel.app">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://maryamdev.vercel.app">
+    <meta property="og:image" content="images/maryam-olaitan.ico">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Maryam Olaitan | Minimalist Web Developer">
+    <meta name="twitter:description" content="Minimalist Web Developer">
+    <meta name="twitter:image" content="images/maryam-olaitan.ico">
+    <title>Maryam Olaitan Profile Card | Hng13 #track-frontend Task 0</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="images/maryam-olaitan.ico" type="image/ico">
+    <link rel="apple-touch-icon" href="images/maryam-olaitan.ico">
+    <script type="application/ld+json">
+        {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Maryam Olaitan",
+        "jobTitle": "Minimalist Web Developer",
+        "url": "https://maryamdev.vercel.app/index.html",
+        "sameAs": [
+            "https://www.instagram.com/_maryamolaitan",
+            "https://wa.me/2348144105468",
+            "mailto:olaitanmaryamm@gmail.com"
+        ],
+        "image": "https://maryamdev.vercel.app/images/maryam-olaitan.ico",
+        "description": "Maryam Olaitan creates minimalist websites that go beyond aesthetics—they tell your story, strengthen your brand, and guide visitors with clarity."
+        }
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Macondo&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h2>Maryam Olaitan</h2>
+        <nav>
+            <img src="images/menu.png" alt="menu, art sales, website design by Maryam Olaitan" class="menu" onclick="toggleMenu()">
+            <ul id="menuList"> 
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main class="contact-main">
+        <h1>Contact Us</h1>
+        <form id="contactForm" novalidate>
+            <div>
+                <label for="name">Full Name:</label>
+                <input type="text" id="name" data-testid="test-contact-name" aria-describedby="error-name" required />
+                <p id="error-name" class="error" data-testid="test-contact-error-name"></p>
+            </div>
+            <div>
+                <label for="email">Email:</label>
+                <input type="email" id="email" data-testid="test-contact-email" aria-describedby="error-email" required />
+                <p id="error-email" class="error" data-testid="test-contact-error-email"></p>
+            </div>
+            <div>
+                <label for="subject">Subject:</label>
+                <input type="text" id="subject" data-testid="test-contact-subject" aria-describedby="error-subject" required />
+                <p id="error-subject" class="error" data-testid="test-contact-error-subject"></p>
+            </div>
+            <div>
+                <label for="message">Message:</label>
+                <textarea id="message" rows="5" data-testid="test-contact-message" aria-describedby="error-message" required></textarea>
+                <p id="error-message" class="error" data-testid="test-contact-error-message"></p>
+            </div>
+            <button type="submit" data-testid="test-contact-submit">Submit</button>
+            <p class="success" id="success" data-testid="test-contact-success" style="display:none;">
+                ✅ Thank you! Your message has been sent successfully.
+            </p>
+        </form>
+    </main>
+    <script>
+        const form = document.getElementById("contactForm");
+        const successMsg = document.getElementById("success");
+
+        form.addEventListener("submit", function (e) {
+        e.preventDefault();
+
+        document.querySelectorAll(".error").forEach(el => el.textContent = "");
+        successMsg.style.display = "none";
+
+        const name = document.getElementById("name").value.trim();
+        const email = document.getElementById("email").value.trim();
+        const subject = document.getElementById("subject").value.trim();
+        const message = document.getElementById("message").value.trim();
+
+        let valid = true;
+        if (!name) {
+            document.getElementById("error-name").textContent = "Full name is required.";
+            valid = false;
+        }
+        if (!email) {
+            document.getElementById("error-email").textContent = "Email is required.";
+            valid = false;
+        } else if (!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(email)) {
+            document.getElementById("error-email").textContent = "Enter a valid email (name@example.com).";
+            valid = false;
+        }
+        if (!subject) {
+            document.getElementById("error-subject").textContent = "Subject is required.";
+            valid = false;
+        }
+        if (!message) {
+            document.getElementById("error-message").textContent = "Message is required.";
+            valid = false;
+        } else if (message.length < 10) {
+            document.getElementById("error-message").textContent = "Message must be at least 10 characters.";
+            valid = false;
+        }
+        if (valid) {
+            form.reset();
+            successMsg.style.display = "block";
+        }
+        });
+    </script>
+    <script>
+        let menuList = document.getElementById('menuList')
+        menuList.style.maxHeight = '0px'; 
+        function toggleMenu() { 
+        if(menuList.style.maxHeight == '0px'){menuList.style.maxHeight = '96vh';}
+        else{menuList.style.maxHeight = '0px';}
+        }
+    </script>
+    <script defer data-domain="maryamolaitan.vercel.app" src="https://plausible.io/js/script.js"></script>
+</body>
+</html>

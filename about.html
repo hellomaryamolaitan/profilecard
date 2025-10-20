@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Maryam Olaitan">
+    <meta name="keywords" content="maryam olaitan, minimalist web developer in nigeria, web design portfolio, website designer in lagos, user experience, brand identity, Maryam Olaitan web developer">
+    <meta name="description" content="Minimalist web developer crafting clean, conversion-focused websites that strengthen brands, delight users, and drive results.">
+    <meta name="robots" content="index, follow">
+    <meta property="og:title" content="Maryam Olaitan | Minimalist Web Developer">
+    <meta property="og:description" content="Minimalist web developer crafting clean, conversion-focused websites that strengthen brands, delight users, and drive results.">
+    <meta property="og:image" content="https://maryamdev.vercel.app/images/maryam-olaitan.ico">
+    <meta property="og:url" content="https://maryamdev.vercel.app">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://maryamdev.vercel.app">
+    <meta property="og:image" content="images/maryam-olaitan.ico">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Maryam Olaitan | Minimalist Web Developer">
+    <meta name="twitter:description" content="Minimalist Web Developer">
+    <meta name="twitter:image" content="images/maryam-olaitan.ico">
+    <title>Maryam Olaitan Profile Card | Hng13 #track-frontend Task 0</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="images/maryam-olaitan.ico" type="image/ico">
+    <link rel="apple-touch-icon" href="images/maryam-olaitan.ico">
+    <script type="application/ld+json">
+        {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Maryam Olaitan",
+        "jobTitle": "Minimalist Web Developer",
+        "url": "https://maryamdev.vercel.app/index.html",
+        "sameAs": [
+            "https://www.instagram.com/_maryamolaitan",
+            "https://wa.me/2348144105468",
+            "mailto:olaitanmaryamm@gmail.com"
+        ],
+        "image": "https://maryamdev.vercel.app/images/maryam-olaitan.ico",
+        "description": "Maryam Olaitan creates minimalist websites that go beyond aesthetics—they tell your story, strengthen your brand, and guide visitors with clarity."
+        }
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Macondo&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&display=swap" rel="stylesheet">
+</head>
+<body class="about-body">
+    <header class="about-header">
+        <h2>Maryam Olaitan</h2>
+        <nav>
+            <img src="images/menu.png" alt="menu, art sales, website design by Maryam Olaitan" class="menu" onclick="toggleMenu()">
+            <ul id="menuList"> 
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main data-testid="test-about-page" class="about-main">
+        <h1>About Me</h1>
+        <section data-testid="test-about-bio">
+            <h2>Biography</h2>
+            <p>
+                I am a contemporary artist and frontend web developer passionate about blending minimal design with expressive storytelling.
+                Through my art and projects, I explore emotion, connection, and reflection.
+            </p>
+        </section>
+        <section data-testid="test-about-goals">
+            <h2>Goals in this Program</h2>
+            <ul>
+                <li>Strengthen my front-end development skills.</li>
+                <li>Improve accessibility and responsive design understanding.</li>
+                <li>Build visually appealing, inclusive interfaces.</li>
+            </ul>
+        </section>
+        <section data-testid="test-about-confidence">
+            <h2>Areas of Low Confidence</h2>
+            <p>
+                I feel unsure when working with JavaScript.
+                But I'm actively practicing to improve.
+            </p>
+        </section>
+        <section data-testid="test-about-future-note">
+            <h2>Note to My Future Self</h2>
+            <p>
+                Keep your curiosity alive. Don't rush progress — consistency will always win. Remember to celebrate small wins!
+            </p>
+        </section>
+        <section data-testid="test-about-extra">
+            <h2>Extra Thoughts</h2>
+            <p>
+                Collaboration and feedback are powerful tools. Keep sharing your journey, and keep refining your craft.
+            </p>
+        </section>
+    </main>
+    <script>
+        let menuList = document.getElementById('menuList')
+        menuList.style.maxHeight = '0px'; 
+        function toggleMenu() { 
+        if(menuList.style.maxHeight == '0px'){menuList.style.maxHeight = '96vh';}
+        else{menuList.style.maxHeight = '0px';}
+        }
+    </script>
+    <script defer data-domain="maryamolaitan.vercel.app" src="https://plausible.io/js/script.js"></script>
+</body>
+</html>
